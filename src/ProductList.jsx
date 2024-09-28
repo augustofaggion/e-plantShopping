@@ -285,6 +285,7 @@ function ProductList() {
     e.preventDefault();
     setShowCart(false);
   };
+  // To initialize dispatch
   const dispatch = useDispatch();
 
   const handleAddToCart = (product) => {
@@ -364,6 +365,9 @@ function ProductList() {
                   >
                     Add to Cart
                   </button>
+                  {addedToCart[plant.name] && (
+                    <div className="added-to-cart">Added to Cart</div>
+                  )}
                 </div>
               ))}
               <div></div>
